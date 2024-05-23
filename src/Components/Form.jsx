@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Card from "./Card";
 import Error from "./Error";
+import "../Styles/Form.css";
 
 const Form = () => {
     const [usuario, setUsuario] = useState({
@@ -26,8 +27,8 @@ const handleSubmit = (event) => {
 
   return (
     <div>
-        <form onSubmit={handleSubmit}>
-
+        <form onSubmit={handleSubmit} className="form-container">
+            
             <label>Nombre:</label>
             <input type="text"
             value={usuario.nombre} 
@@ -38,7 +39,7 @@ const handleSubmit = (event) => {
             value={usuario.animalPreferido} 
             onChange={(event) => setUsuario({...usuario, animalPreferido: event.target.value})}/>
 
-            <button>Enviar</button>
+            <button className="button">Enviar</button>
 
         </form>
         {show ? <Card usuario={usuario} /> : null}

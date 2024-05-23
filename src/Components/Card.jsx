@@ -3,8 +3,8 @@ const Card = ({ usuario }) => {
   const {nombre, animalPreferido} = usuario;
   return (
     <div>
-      <h4>Felicitaciones, {nombre}!</h4>
-      <h5>Tu animal preferido es el siguiente: {animalPreferido}</h5>
+      <h3>Felicitaciones, {nombre}!</h3>
+      <h4>Tu animal preferido es el siguiente: {animalPreferido}</h4>
     </div>
   )
 }
